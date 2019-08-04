@@ -1,0 +1,57 @@
+.site {
+    max-width: var(--layout-main-width);
+    margin: 0 auto;
+    padding: 2em;
+
+    @include bp( laptop ) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 4em;
+        grid-template-areas:
+            "header header header header"
+            "main main sidebar sidebar"
+            "post post post post"
+            "post post post post"
+            "post post post post"
+            "post post post post"
+            "footer footer footer footer";
+
+        .site-header {
+            grid-area: header;
+        }
+        .site-post {
+            grid-area: post;
+        }
+        .site-main {
+            grid-area: main;
+        }
+    
+        .site-sidebar {
+            grid-area: sidebar;
+        }
+    
+        .site-footer {
+            display: flex;
+            grid-area: footer;
+            justify-content: space-between;
+            align-items:center;
+        }
+    
+        .site-header {
+            display: flex;
+            align-items: center;
+        }
+    
+        .site-header nav {
+            margin-left: auto;
+        }
+
+        .site-header-right  nav{
+            margin-right: auto;
+        }
+
+        .nav-item-right {
+            float: left;
+        }
+    }
+}

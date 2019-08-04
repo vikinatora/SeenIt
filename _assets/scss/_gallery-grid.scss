@@ -1,0 +1,170 @@
+/*
+ * Layout rules for Gallery page
+ * Update Grid areas
+ */
+.page-gallery .site {   
+    @include bp( laptop ) {
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+
+    }
+}
+
+/*
+ * Gallery styles
+ */
+.gallery {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em;
+    grid-auto-flow: dense;
+
+    a,
+    span,
+    img {
+        display: block;
+    }
+
+    input {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    li {
+        display: block;
+        list-style: none outside;
+        overflow: hidden;
+        grid-column: span 2;
+
+        &:hover {
+            outline: 0.5em solid #000;
+        }
+
+        label {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            span {
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+            }
+
+            strong {
+                display: none;
+            }
+
+            &:before {
+                display: block;
+                content: '';
+                padding-top: calc(50% - 1em);
+            }
+
+            &.close {
+                display: none;
+                font-size: 2em;
+                width: 2em;
+                height: 2em;
+                line-height: 1;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease-in-out;
+                position: fixed;
+                top: 1em; right: 1em;
+                background: #000;
+                color: #FFF;
+                z-index: 300;
+
+                &:hover {
+                    transform: scale(1.1);
+                    outline: 0.5em solid #FFF;
+                }
+            }
+        }
+
+        input:checked ~ label {
+            
+            &.close {
+                display: flex;
+            }
+        }
+
+        input:checked ~ a {
+            display: flex;
+        }
+
+        a {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw;
+            height: 80vh;
+            overflow: hidden;
+            z-index: 100;
+            box-shadow: 0 0 100vw 100vw rgba(black, 0.9);
+            background: rgba(black, 0.9);
+
+            span {
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            strong {
+                display: none;
+            }
+        }
+    
+        &.portrait {
+            grid-column: span 1;
+            grid-row: span 2;
+        
+            label:before {
+                display: flex;
+                padding-top: 200%;
+            }
+
+            a img {
+                height: 100%;
+                width: auto;
+            }
+        }
+        
+        &.small img,
+        &.portrait img {
+            width: auto;
+            height: 100%;
+        }
+        
+        &.small {
+            grid-column: span 1;
+            grid-row: span 1;
+        
+            &:before {
+                padding-top: 100%;
+            }    
+        }
+    }
+}
