@@ -1,0 +1,55 @@
+.body {
+    &-white {
+        background: var(--color-body-bgrd);
+    }
+    &-dark {
+        background: darkslategray;
+    }
+}
+
+
+.post {
+    &-white {
+        & a {
+            color: black;
+        }
+        
+        &:hover {
+            border: 1px solid black;
+        }
+    }
+
+    &-dark {
+        & a {
+            color: white;
+        }
+        &:hover {
+            border: 1px solid white;
+        }
+    }  
+}
+
+.posts {
+    &-white {
+        & a:nth-child(2){
+            color: darkgray;
+        }
+    }
+
+    &-dark {
+        & a:nth-child(2){
+            color: darkgray;
+        }
+    }
+}
+
+.comments {
+    &-white span:hover{
+        background-color: gray;
+    }
+
+    &-dark span:hover{
+        background-color: black;
+    }
+    
+}

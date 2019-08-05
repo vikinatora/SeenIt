@@ -11,10 +11,6 @@
     &:nth-child(even){
         animation: 1s ease-out 0s 1 slideInFromRight
     }
-
-    &:hover {
-        border: 1px solid black;
-    }
 }
 
 .posts {
@@ -23,7 +19,6 @@
     list-style: none;
 
     & a {
-        color: black;
         font-size: 24px;
         padding-left: 0.5em;
         padding-top: 0.2em;
@@ -35,7 +30,6 @@
     }
 
     & a:nth-child(2){
-        color: darkgray;
         font-size:16px;
         padding-left: 0.8em;
         padding-top: 0.1em;
@@ -55,31 +49,26 @@
         padding-top: 0.1em;
         padding-bottom: 0.5em;
     }
+
     & i{
         transition: transform 0.4s ease-in-out;
     }
-    & i[class ~= "fa-arrow-up"]:hover{
-        color: red;
-        transform: rotate(360deg);
 
+    & i[class ~= "fa-arrow-up"]:hover{
+        color: red;   
+        transform: rotate(360deg); 
     }
 
     & i[class ~= "fa-arrow-down"]:hover{
         color: blue;
-        transform: rotate(360deg);
-
+        transform: rotate(360deg); 
     }
-
-    
 }
 
 .comments {
     & span {
         padding: 0.3em;
         border-radius: 3px;
-    }
-    & span:hover{
-        background-color: gray;
     }
 }
 
