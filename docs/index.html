@@ -25,19 +25,19 @@
                     <li class="selected">
                         <a href="/">Posts</a>
                         <ul>
-                            <li><a href="/all/">All</a></li>
-                            <li><a href="/popular/">Popular</a></li><li><a href="/new/">New</a></li>
+                            <li><a class="button button-white" href="/all/">All</a></li>
+                            <li><a class="button button-white" href="/popular/">Popular</a></li>
+                            <li><a class="button button-white" href="/new/">New</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="/about/">About</a></li>
+                    <li><a class="button button-white" href="/about/">About</a></li>
 
                     <li>
-                        <a href="/"><i class="fas fa-id-card-alt"></i>Themes</a>
+                        <a class="button button-white" href="/"><i class="fas fa-id-card-alt"></i>Themes</a>
                         <ul>         
-                            <li class="selected"><a id="white" onclick="changeToWhite()" href="#">White</a></li>
-                            <li class="selected"><a id="dark" onclick="changeToDark()" href="#">Dark</a></li>
-                            <li class="selected"><a id="red" href="#">Red</a></li>
+                            <li><a class="button button-white" id="white" onclick="changeToWhite()" href="#">White</a></li>
+                            <li><a class="button button-white" id="dark" onclick="changeToDark()" href="#">Dark</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -87,9 +87,9 @@
                     <li>
                         <a href="/">Follow me on</a>
                         <ul>
-                            <li><a href="/all/">LinkedIn</a></li> 
-                            <li><a href="/popular/">Instagram</a></li>
-                            <li><a href="/new/">Facebook</a></li>
+                            <li><a class="button button-white" href="/all/">LinkedIn</a></li> 
+                            <li><a class="button button-white" href="/popular/">Instagram</a></li>
+                            <li><a class="button button-white" href="/new/">Facebook</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -119,6 +119,12 @@
         });
         document.body.classList.remove("body-dark");
         document.body.classList.remove("body-white")
+
+        let buttons = document.getElementsByClassName('button');
+        Array.from(buttons).forEach(button => {
+            button.classList.remove("button-dark");
+            button.classList.add('button-white');
+        });
     }
 
     function changeToDark() {
@@ -139,6 +145,13 @@
             comment.classList.add("comments-dark");
             comment.classList.remove('comments-white');
         });
+
+        let buttons = document.getElementsByClassName('button');
+        Array.from(buttons).forEach(button => {
+            button.classList.add("button-dark");
+            button.classList.remove('button-white');
+        });
+
         document.body.classList.add("body-dark");
         document.body.classList.remove("body-white")
     }

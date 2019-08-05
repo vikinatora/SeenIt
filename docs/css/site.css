@@ -9,7 +9,7 @@
   --color-body-bgrd: #FFF;
   --color-link-default: #ff8000;
   --color-border-default: #999;
-  --spacing-layout-elements: 1em; }
+  --spacing-layout-elements: 0.5em; }
 
 *, *:before, *:after {
   margin: 0;
@@ -268,8 +268,7 @@ blockquote .author:before {
 .site-nav a {
   display: block;
   padding: 0.5em 1em;
-  border-radius: 0.3em;
-  background: #EEE; }
+  border-radius: 0.3em; }
 
 .site-nav li:hover > a,
 .site-nav li.selected > a,
@@ -639,3 +638,11 @@ blockquote .author:before {
 
 .comments-dark span:hover {
   background-color: black; }
+
+.button-white {
+  background-color: #EEE;
+  color: black; }
+
+.button-dark {
+  background-color: gray;
+  color: white; }
