@@ -4,8 +4,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('dark').addEventListener('click', function() {
         console.log("KUR");
     })
+
+    function changeToWhite(){
+        console.log("KUR");
+    }
+
 });
 
-function changeToWhite() {
-    console.log("KUR");
-}
