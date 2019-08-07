@@ -1,26 +1,37 @@
 <nav class="site-nav location-{{ include.location }}">
-
     <ul>
-    {% for item in site.navigation %}
-        <li{% if item.url == page.url %} class="selected"{% endif %}>
-            <a href="{{ site.baseurl }}{{ item.url }}">
-                {% if item.icon %}<i class="fas {{ item.icon }}"></i>{% endif %}
-                {{ item.text }}
-            </a>
-            {% if item.items %}
-            <ul>
-                {% for subitem in item.items %}
-                    <li{% if subitem.url == page.url %} class="selected"{% endif %}>
-                        <a href="{{ site.baseurl }}{{ subitem.url }}">
-                            {% if subitem.icon %}<i class="fas {{ subitem.icon }}"></i>{% endif %}
-                            {{ subitem.text }}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
+        <li class="selected">
+            <a href="/SeenIt/">Posts</a>          
+            <ul>              
+                <li class="selected">
+                    <a href="/SeenIt/">All</a>
+                </li class="selected">
+                <li>
+                    <a href="/SeenIt/">Popular</a>
+                </li class="selected">
+                <li>
+                    <a href="/SeenIt/">New</a>
+                </li>     
+            </ul>           
         </li>
-    {% endfor %}
-    </ul>
-    
+        <li>
+            <a href="/SeenIt/about/">              
+                About
+            </a>
+        </li> 
+        <li class="selected">
+            <a href="#">
+                <i class="fas fa-id-card-alt"></i> Themes
+            </a>
+            <ul>        
+                <li class="selected">
+                    <a href="#" onclick="changeToDark()">White</a>
+                </li>
+            
+                <li class="selected">
+                    <a href="#" onclick="changeToDark()">Dark</a>
+                </li>
+            </ul>            
+        </li>    
+    </ul>    
 </nav>

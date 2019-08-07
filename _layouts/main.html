@@ -15,6 +15,57 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/pages/{{ page.css }}.css">
     {% endif %}
     <script src="{{ site.baseurl }}/scripts/site.js"></script>
+    <script type="text/javascript">
+        function changeToWhite() {
+            let li = document.getElementsByClassName('post');
+            Array.from(li).forEach(li => {
+                li.classList.remove("post-dark");
+                li.classList.add('post-white');
+            });
+            let ul = document.getElementsByClassName('posts');
+            Array.from(ul).forEach(ul => {
+                ul.classList.remove("posts-dark");
+                ul.classList.add('posts-white');
+            });
+            let comments = document.getElementsByClassName('comments');
+            Array.from(comments).forEach(comment => {
+                comment.classList.remove("comments-dark");
+                comment.classList.add('comments-white');
+            });
+            document.body.classList.remove("body-dark");
+            document.body.classList.remove("body-white")
+            let buttons = document.getElementsByClassName('button');
+            Array.from(buttons).forEach(button => {
+                button.classList.remove("button-dark");
+                button.classList.add('button-white');
+            });
+        }
+
+        function changeToDark() {
+            let li = document.getElementsByClassName('post');
+            Array.from(li).forEach(li => {
+                li.classList.add("post-dark");
+                li.classList.remove('post-white');
+            });
+            let ul = document.getElementsByClassName('posts');
+            Array.from(ul).forEach(ul => {
+                ul.classList.add("posts-dark");
+                ul.classList.remove('posts-white');
+            });
+            let comments = document.getElementsByClassName('comments');
+            Array.from(comments).forEach(comment => {
+                comment.classList.add("comments-dark");
+                comment.classList.remove('comments-white');
+            });
+            let buttons = document.getElementsByClassName('button');
+            Array.from(buttons).forEach(button => {
+                button.classList.add("button-dark");
+                button.classList.remove('button-white');
+            });
+            document.body.classList.add("body-dark");
+            document.body.classList.remove("body-white")
+        }
+    </script>
 </head>
 <body class="
     {% if page.title %}page page-{{ page.title | slugify }}{% endif %}
@@ -59,6 +110,8 @@
         </footer>
 
     </div>
-    
 </body>
+<script>
+    
+</script>
 </html>
