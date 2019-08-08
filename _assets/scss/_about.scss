@@ -62,28 +62,37 @@
     width: 100%;
     max-height: 100%;
     position: relative;
-}
+    border-radius: 1%;
 
+}
 .overlay{
     position: absolute;
     width: 200px;
     height: 200px;
     right: 50%;
-    top: 40%;
+    top: 30%;
     border-radius: 50%;
     opacity: 0.9;
     box-shadow: 2px 2px 31px 10px rgba(0,0,0,0.55);
     -webkit-box-shadow: 2px 2px 31px 10px rgba(0,0,0,0.55);
     -moz-box-shadow: 2px 2px 31px 10px rgba(0,0,0,0.55);
-
 }
 
 .heading {
     position: absolute;
-    top: 75%;
+    top: 70%;
+    right: 37%;
+    font-size: 50px;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 }
 
-span {
-    font-size: 50;
+.personal-info {
+    
 }
+
+.projects {
+    display: flex;
+}
+
