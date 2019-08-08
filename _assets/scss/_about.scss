@@ -1,0 +1,89 @@
+.site-about {
+    max-width: var(--layout-about-width);
+    margin: 0 auto;
+    padding: 2em;
+
+    @include bp( laptop ) {
+        display: grid;
+        grid-template-columns: 5fr;
+        grid-column-gap: 4em;
+        grid-template-areas:
+            "header header header"
+            "banner banner banner"
+            "banner banner banner"
+            "info info info"
+            "info info info"
+            "projects projects projects"
+            "projects projects projects"
+            "footer footer footer";
+
+        .site-header {
+            grid-area: header;
+        }
+        .banner {
+            grid-area: banner;
+        }
+        .personal-info {
+            grid-area: info;
+        }
+        .projects {
+            grid-area: projects;
+        }
+
+        .site-footer {
+            display: flex;
+            grid-area: footer;
+            justify-content: space-between;
+            align-items:center;
+        }
+    
+        .site-header {
+            display: flex;
+            align-items: center;
+        }
+    
+        .site-header nav {
+            margin-left: auto;
+        }
+
+        .site-header-right  nav{
+            margin-right: auto;
+        }
+
+        .nav-item-right {
+            float: left;
+        }
+    }
+}
+
+.background {
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 50%;
+    top: 40%;
+    border-radius: 50%;
+    opacity: 0.9;
+    box-shadow: 2px 2px 31px 10px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 2px 2px 31px 10px rgba(0,0,0,0.55);
+    -moz-box-shadow: 2px 2px 31px 10px rgba(0,0,0,0.55);
+
+}
+
+.heading {
+    position: absolute;
+    top: 75%;
+
+}
+
+span {
+    font-size: 50;
+}

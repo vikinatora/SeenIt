@@ -5,110 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="shortcut icon" href="/SeenIt/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/SeenIt/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>Seenit <i class="fab fa-reddit"></i></title>
-    <link rel="stylesheet" href="/SeenIt/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="/SeenIt/css/site.css">
+    <title>Seenit</title>
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/site.css">
     
-    <script src="/SeenIt/scripts/site.js"></script>
+    <script src="/scripts/site.js"></script>
+    <script type="text/javascript">
+        function changeToWhite() {
+            let li = document.getElementsByClassName('post');
+            Array.from(li).forEach(li => {
+                li.classList.remove("post-dark");
+                li.classList.add('post-white');
+            });
+            let ul = document.getElementsByClassName('posts');
+            Array.from(ul).forEach(ul => {
+                ul.classList.remove("posts-dark");
+                ul.classList.add('posts-white');
+            });
+            let comments = document.getElementsByClassName('comments');
+            Array.from(comments).forEach(comment => {
+                comment.classList.remove("comments-dark");
+                comment.classList.add('comments-white');
+            });
+            document.body.classList.remove("body-dark");
+            document.body.classList.remove("body-white")
+            let buttons = document.getElementsByClassName('button');
+            Array.from(buttons).forEach(button => {
+                button.classList.remove("button-dark");
+                button.classList.add('button-white');
+            });
+        }
+
+        function changeToDark() {
+            let li = document.getElementsByClassName('post');
+            Array.from(li).forEach(li => {
+                li.classList.add("post-dark");
+                li.classList.remove('post-white');
+            });
+            let ul = document.getElementsByClassName('posts');
+            Array.from(ul).forEach(ul => {
+                ul.classList.add("posts-dark");
+                ul.classList.remove('posts-white');
+            });
+            let comments = document.getElementsByClassName('comments');
+            Array.from(comments).forEach(comment => {
+                comment.classList.add("comments-dark");
+                comment.classList.remove('comments-white');
+            });
+            let buttons = document.getElementsByClassName('button');
+            Array.from(buttons).forEach(button => {
+                button.classList.add("button-dark");
+                button.classList.remove('button-white');
+            });
+            document.body.classList.add("body-dark");
+            document.body.classList.remove("body-white")
+        }
+    </script>
 </head>
 <body class="
     page page-gallery
     
     
 ">
-    <div class="site">
+    <div class="site-">
 
         <header class="site-header">
 
             
             <p class="site-title">
-                <a href="/SeenIt/">Seenit <i class="fab fa-reddit"></i></a>
+                <a href="/">Seenit</a>
             </p>
             
 
             <nav class="site-nav location-header">
-
     <ul>
-    
-        <li>
-            <a href="/SeenIt/">
-                
-                Posts
-            </a>
-            
-            <ul>
-                
-                    <li>
-                        <a href="/SeenIt/all/">
-                            
-                            All
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/popular/">
-                            
-                            Popular
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/new/">
-                            
-                            New
-                        </a>
-                    </li>
-                
-            </ul>
-            
+        <li class="selected">
+            <a href="/SeenIt/">Posts</a>          
+            <ul>              
+                <li class="selected">
+                    <a href="/SeenIt/">All</a>
+                </li class="selected">
+                <li>
+                    <a href="/SeenIt/">Popular</a>
+                </li class="selected">
+                <li>
+                    <a href="/SeenIt/">New</a>
+                </li>     
+            </ul>           
         </li>
-    
         <li>
-            <a href="/SeenIt/about/">
-                
+            <a href="/about/">              
                 About
             </a>
-            
-        </li>
-    
-        <li>
-            <a href="/SeenIt/">
-                <i class="fas fa-id-card-alt"></i>
-                Themes
+        </li> 
+        <li class="selected">
+            <a href="#">
+                <i class="fas fa-id-card-alt"></i> Themes
             </a>
+            <ul>        
+                <li class="selected">
+                    <a href="#" onclick="changeToWhite()">White</a>
+                </li>
             
-            <ul>
-                
-                    <li>
-                        <a href="/SeenIt/">
-                            
-                            White
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/">
-                            
-                            Dark
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/">
-                            
-                            Red
-                        </a>
-                    </li>
-                
-            </ul>
-            
-        </li>
-    
-    </ul>
-    
+                <li class="selected">
+                    <a href="#" onclick="changeToDark()">Dark</a>
+                </li>
+            </ul>            
+        </li>    
+    </ul>    
 </nav>
 
         </header>
@@ -360,93 +367,51 @@
         
 
         <footer class="site-footer">
-            <p>All rights reserved &copy; Seenit <i class="fab fa-reddit"></i></p>
+            <p>All rights reserved &copy; Seenit</p>
 
             <nav class="site-nav location-footer">
-
     <ul>
-    
-        <li>
-            <a href="/SeenIt/">
-                
-                Posts
-            </a>
-            
-            <ul>
-                
-                    <li>
-                        <a href="/SeenIt/all/">
-                            
-                            All
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/popular/">
-                            
-                            Popular
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/new/">
-                            
-                            New
-                        </a>
-                    </li>
-                
-            </ul>
-            
+        <li class="selected">
+            <a href="/SeenIt/">Posts</a>          
+            <ul>              
+                <li class="selected">
+                    <a href="/SeenIt/">All</a>
+                </li class="selected">
+                <li>
+                    <a href="/SeenIt/">Popular</a>
+                </li class="selected">
+                <li>
+                    <a href="/SeenIt/">New</a>
+                </li>     
+            </ul>           
         </li>
-    
         <li>
-            <a href="/SeenIt/about/">
-                
+            <a href="/about/">              
                 About
             </a>
-            
-        </li>
-    
-        <li>
-            <a href="/SeenIt/">
-                <i class="fas fa-id-card-alt"></i>
-                Themes
+        </li> 
+        <li class="selected">
+            <a href="#">
+                <i class="fas fa-id-card-alt"></i> Themes
             </a>
+            <ul>        
+                <li class="selected">
+                    <a href="#" onclick="changeToWhite()">White</a>
+                </li>
             
-            <ul>
-                
-                    <li>
-                        <a href="/SeenIt/">
-                            
-                            White
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/">
-                            
-                            Dark
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/SeenIt/">
-                            
-                            Red
-                        </a>
-                    </li>
-                
-            </ul>
-            
-        </li>
-    
-    </ul>
-    
+                <li class="selected">
+                    <a href="#" onclick="changeToDark()">Dark</a>
+                </li>
+            </ul>            
+        </li>    
+    </ul>    
 </nav>
 
         </footer>
 
     </div>
-    
 </body>
+<script>
+    
+</script>
 </html>

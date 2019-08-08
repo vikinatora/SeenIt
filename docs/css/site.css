@@ -5,6 +5,7 @@
   --font-size-body-big: 18px;
   --font-size-body-huge: 20px;
   --layout-main-width: 60em;
+  --layout-about-width: 80em;
   --color-body-text: #000;
   --color-body-bgrd: #FFF;
   --color-link-default: #ff8000;
@@ -116,37 +117,37 @@ blockquote .author:before {
       .button-wrapper .button + .button {
         margin-left: 1em; }
 
-.site {
+.site-posts {
   max-width: var(--layout-main-width);
   margin: 0 auto;
   padding: 2em; }
   @media (min-width: 1024px) {
-    .site {
+    .site-posts {
       display: grid;
       grid-template-columns: 2fr 1fr;
       grid-column-gap: 4em;
       grid-template-areas: "header header header header" "main main sidebar sidebar" "post post post post" "post post post post" "post post post post" "post post post post" "footer footer footer footer"; }
-      .site .site-header {
+      .site-posts .site-header {
         grid-area: header; }
-      .site .site-post {
+      .site-posts .site-post {
         grid-area: post; }
-      .site .site-main {
+      .site-posts .site-main {
         grid-area: main; }
-      .site .site-sidebar {
+      .site-posts .site-sidebar {
         grid-area: sidebar; }
-      .site .site-footer {
+      .site-posts .site-footer {
         display: flex;
         grid-area: footer;
         justify-content: space-between;
         align-items: center; }
-      .site .site-header {
+      .site-posts .site-header {
         display: flex;
         align-items: center; }
-      .site .site-header nav {
+      .site-posts .site-header nav {
         margin-left: auto; }
-      .site .site-header-right nav {
+      .site-posts .site-header-right nav {
         margin-right: auto; }
-      .site .nav-item-right {
+      .site-posts .nav-item-right {
         float: left; } }
 
 .page-blog .site {
@@ -646,3 +647,63 @@ blockquote .author:before {
 .button-dark {
   background-color: gray;
   color: white; }
+
+.site-about {
+  max-width: var(--layout-about-width);
+  margin: 0 auto;
+  padding: 2em; }
+  @media (min-width: 1024px) {
+    .site-about {
+      display: grid;
+      grid-template-columns: 5fr;
+      grid-column-gap: 4em;
+      grid-template-areas: "header header header" "banner banner banner" "banner banner banner" "info info info" "info info info" "projects projects projects" "projects projects projects" "footer footer footer"; }
+      .site-about .site-header {
+        grid-area: header; }
+      .site-about .banner {
+        grid-area: banner; }
+      .site-about .personal-info {
+        grid-area: info; }
+      .site-about .projects {
+        grid-area: projects; }
+      .site-about .site-footer {
+        display: flex;
+        grid-area: footer;
+        justify-content: space-between;
+        align-items: center; }
+      .site-about .site-header {
+        display: flex;
+        align-items: center; }
+      .site-about .site-header nav {
+        margin-left: auto; }
+      .site-about .site-header-right nav {
+        margin-right: auto; }
+      .site-about .nav-item-right {
+        float: left; } }
+
+.background {
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  position: relative; }
+
+.overlay {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 50%;
+  top: 40%;
+  border-radius: 50%;
+  opacity: 0.9;
+  box-shadow: 2px 2px 31px 10px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 2px 2px 31px 10px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 2px 2px 31px 10px rgba(0, 0, 0, 0.55); }
+
+.heading {
+  position: absolute;
+  top: 75%; }
+
+span {
+  font-size: 50; }
