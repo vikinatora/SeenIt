@@ -70,7 +70,7 @@
     
     
 ">
-    <div class="site-popular">
+    <div class="site-about">
 
         <header class="site-header">
 
@@ -120,88 +120,61 @@
 
         </header>
 
-        <main class="site-main popular">
-            <section>
-        <div>
-            <ul class="posts posts-white">
-                <li class="post post-white">
-                    <a href="#">ELI5: How does a compass on your phone work?</a>
-                    <a href="#">s/ELI5 · posted by mysteryGuy</a>
-                    <a class="comments comments-white" href="#"><span>58<i class="fas fa-comments"></i></span> <span><i class="fas fa-arrow-up"></i> 280 <i class="fas fa-arrow-down"></i> </span> </a>
-                </li><li class="post post-white">
-                    <a href="#">I'm interested in Rousseau, specifically his ethics. Which work of his should I read?</a>
-                    <a href="#">s/askphilosophy · posted by philMan236</a>
-                    <a class="comments comments-white" href="#"><span>22<i class="fas fa-comments"></i></span> <span><i class="fas fa-arrow-up"></i> 90 <i class="fas fa-arrow-down"></i> </span> </a>
-                </li><li class="post post-white">
-                    <a href="#">AwesomeBrainPowers shows why "boys will be boys" is not an excuse - & is an insult to men in general.</a>
-                    <a href="#">s/bestof · posted by BillHicksScream</a>
-                    <a class="comments comments-white" href="#"><span>230<i class="fas fa-comments"></i></span> <span><i class="fas fa-arrow-up"></i> 1.5k <i class="fas fa-arrow-down"></i> </span> </a>
-                </li>
-                <li class="post post-white">
-                    <a href="#">Static shocks you get when touching things must be one hell of a lightning storm for the bacteria on your skin</a>
-                    <a href="#">s/ShowerThoughts · posted by tralalaBoom</a>
-                    <a class="comments comments-white" href="#"><span>555<i class="fas fa-comments"></i></span> <span><i class="fas fa-arrow-up"></i> 1k <i class="fas fa-arrow-down"></i> </span> </a>
-                </li>
-                <li class="post post-white">
-                    <a href="#">A dystopian where it slowly becomes clear to the reader that the protagonist is wrong and the government/ institution is right</a>
-                    <a href="#">s/suggestmeabook · posted by futz885</a>
-                    <a class="comments comments-white" href="#"><span>3 <i class="fas fa-comments"></i></span> <span><i class="fas fa-arrow-up"></i> 2.4k <i class="fas fa-arrow-down"></i> </span> </a>
-                </li>
-            </ul>
+        <main class="site-main about">
+            <section class="banner">
+    <img class="background" src="../images/landscapejpg.jpg"/>
+    <img class="overlay" src="../images/myself.jpg"/>
+    <div class="heading">
+        <p> Welcome to my page</p>
+    </div>
+</section>
+<section class="personal-info">
+    <div class="info">
+        <h1>Who am I</h1>
+        <p>
+            I'm a 20 year old application developer in Sofia. I study Informatics and Software Engineering at Technical Univerity of
+            Sofia. I'm born in Sliven but I live in Sofia where I currently work and study. In my free time I like to read books about
+            self improvement, go to the gym and improve my skills in League of Legends when I have nothing else to do. I'm also interested
+            in psychology but programming took the edge over it.
+        </p>
+    </div>
+    
+</section>
+<div class="info">
+    <h1>Projects</h1>
+</div>
+<section class="projects info">
+    <div class="project">
+        <img class="project-image" src="../images/olxpng.png" />
+        <div class="project-description">
+            <p class="description">Olx</p>
+            <p class="description">Olx is a Angular SPA project for JS-Web course in Softuni. I tried to recreate the popular online trading platform olx</p>
         </div>
-    </section>  
+    </div>
+    <div class="project">
+        <img class="project-image" src="../images/olxpng.png" />
+        <div class="project-description">
+            <p class="description">JS Blog</p>
+            <p class="description">JS Blog is a React SPA project for JS-Web course in Softuni. It's a personal blog for myself where I can write posts about interesting topics and people can like, dislike and comment </p>
 
-    <script type="text/javascript">
-        function changeToWhite() {
-            let li = document.getElementsByClassName('post');
-            Array.from(li).forEach(li => {
-                li.classList.remove("post-dark");
-                li.classList.add('post-white');
-            });
-            let ul = document.getElementsByClassName('posts');
-            Array.from(ul).forEach(ul => {
-                ul.classList.remove("posts-dark");
-                ul.classList.add('posts-white');
-            });
-            let comments = document.getElementsByClassName('comments');
-            Array.from(comments).forEach(comment => {
-                comment.classList.remove("comments-dark");
-                comment.classList.add('comments-white');
-            });
-            document.body.classList.remove("body-dark");
-            document.body.classList.remove("body-white")
-            let buttons = document.getElementsByClassName('button');
-            Array.from(buttons).forEach(button => {
-                button.classList.remove("button-dark");
-                button.classList.add('button-white');
-            });
-        }
-
-        function changeToDark() {
-            let li = document.getElementsByClassName('post');
-            Array.from(li).forEach(li => {
-                li.classList.add("post-dark");
-                li.classList.remove('post-white');
-            });
-            let ul = document.getElementsByClassName('posts');
-            Array.from(ul).forEach(ul => {
-                ul.classList.add("posts-dark");
-                ul.classList.remove('posts-white');
-            });
-            let comments = document.getElementsByClassName('comments');
-            Array.from(comments).forEach(comment => {
-                comment.classList.add("comments-dark");
-                comment.classList.remove('comments-white');
-            });
-            let buttons = document.getElementsByClassName('button');
-            Array.from(buttons).forEach(button => {
-                button.classList.add("button-dark");
-                button.classList.remove('button-white');
-            });
-            document.body.classList.add("body-dark");
-            document.body.classList.remove("body-white")
-        }
-    </script>
+        </div>
+    </div>
+    <div class="project">
+        <img class="project-image" src="../images/olxpng.png" />
+        <div class="project-description">
+            <p class="description">Viktor's blog</p>
+            <p class="description">Viktor's blog is a personal blog for C# Web course in Softuni. It's done using MVC and Razor Pages with some additional admin functionality and security.</p>
+        </div>
+    </div>
+   <div class="project">
+        <img class="project-image" src="../images/olxpng.png" />
+        <div class="project-description">
+            <p class="description">Project Manager</p>
+            <p class="description">Project manager is a web app made with ExpressJS. It's use is to create project and teams and assign people to the teams and them to projects.</p>
+        </div>
+    </div>
+</section>
+    
 
         </main>
 
