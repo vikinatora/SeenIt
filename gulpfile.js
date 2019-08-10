@@ -15,19 +15,7 @@ gulp.task("css", function() {
 		.pipe( browserSync.stream({ match: '**/*.css' }) )
 	;
 });
-
-// Jekyll
-gulp.task("jekylldev", function() {
-	return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit", shell: true });
-});
-
-// Jekyll
-gulp.task("jekyllprod", function() {
-	return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl /SeenIt"], { stdio: "inherit", shell: true });
-});
-
 gulp.task("watch", function() {
-
 	browserSync.init({
 		server: {
             baseDir: "./docs/"
@@ -48,6 +36,15 @@ gulp.task("watch", function() {
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
 });
+gulp.task("jekylldev", function() {
+	return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit", shell: true });
+});
+
+gulp.task("jekyllprod", function() {
+	return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl /SeenIt"], { stdio: "inherit", shell: true });
+});
+
+
 
 gulp.task("deploy", gulp.series('jekyllprod', 'css'));
 
