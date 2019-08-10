@@ -1,3 +1,46 @@
+.site-posts {
+    @include bp( mobile ) {
+        @include mobile-nav;
+        
+        .posts {
+            & a {
+                font-size: var(--font-size-body-huge)
+            }
+            & a:nth-child(2){
+                font-size:var(--font-size-body-larger);
+            }
+            
+            & a:nth-child(3){
+                font-size:var(--font-size-body-larger);
+            }
+        
+            & a:nth-child(4){
+                font-size:var(--font-size-body-larger);
+            }
+        }
+    }
+
+    @include bp( phone ) {
+        @include mobile-nav;
+        
+        .posts {
+            & a {
+                font-size: var(--font-size-body-larger)
+            }
+            & a:nth-child(2){
+                font-size:var(--font-size-body-small);
+            }
+            
+            & a:nth-child(3){
+                font-size:var(--font-size-body-small);
+            }
+        
+            & a:nth-child(4){
+                font-size:var(--font-size-body-small);
+            }
+        }
+    }
+}
 .post {
     text-decoration: none;
     border-radius: 6px;
@@ -7,10 +50,11 @@
     padding: 0.2em;
     box-sizing: border-box;
     animation: 1s ease-out 0s 1 slideInFromLeft;
-
     &:nth-child(even){
         animation: 1s ease-out 0s 1 slideInFromRight
     }
+
+    
 }
 
 .posts {
@@ -19,7 +63,7 @@
     list-style: none;
 
     & a {
-        font-size: 24px;
+        font-size: var(--font-size-body-enormous);
         padding-left: 0.5em;
         padding-top: 0.2em;
     
@@ -30,21 +74,21 @@
     }
 
     & a:nth-child(2){
-        font-size:16px;
+        font-size: var(--font-size-body-larger);
         padding-left: 0.8em;
         padding-top: 0.1em;
         padding-bottom: 0.5em;
     }
     
     & a:nth-child(3){
-        font-size:16px;
+        font-size: var(--font-size-body-larger);
         padding-left: 0.8em;
         padding-top: 0.1em;
         padding-bottom: 0.5em;
     }
 
     & a:nth-child(4){
-        font-size:16px;
+        font-size: var(--font-size-body-larger);
         padding-left: 0.8em;
         padding-top: 0.1em;
         padding-bottom: 0.5em;

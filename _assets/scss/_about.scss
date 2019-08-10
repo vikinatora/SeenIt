@@ -97,28 +97,7 @@
             align-items:center;
         }
     
-        .site-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            & nav {
-                margin:0 auto;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-    
-            }
-            
-        }
-
-        .site-header-right  nav{
-            margin-right: auto; 
-        }
-
-        .nav-item-right {
-            float: left;
-        }
+        @include mobile-nav;
     }
 
     @include bp( phone ) {
